@@ -1,32 +1,34 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div id="app" class="app">
+    <component :is="layout">
+       <router-view/>
+    </component>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import EmptyLayout from "@/layouts/EmptyLayout" 
+import MainLayout from "@/layouts/MainLayout" 
+export default {
+    name: 'App',
+    computed:{
+      layout(){
+        return (this.$route.meta.layout || 'empty') + '-layout'
+      }
+    },
+    mounted(){
+    },
+    methods:{
+      
+    },
+    components:{
+      EmptyLayout , MainLayout
+    },
 }
+</script>
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+<style lang='sass'>
+@import '~materialize-css/dist/css/materialize.min.css'
+@import 'assets/scss/style.scss'
+@import '~@radial-color-picker/vue-color-picker/dist/vue-color-picker.min.css'
 </style>

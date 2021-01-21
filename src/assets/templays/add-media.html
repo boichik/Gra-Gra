@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="css/croppie.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+	<title>Document</title>
+</head>
+<body>
+	<!-- Header -->
+	<header class="header">
+		<div class="m-container">
+			<!-- Header Navbar Mobile version -->
+			<div class="header-nav-mobile">
+				<div class="header-nav__logo"><h3>Gra Gra</h3></div>
+				<a href='#!' class="header-nav__button">Выйти</div>
+			</div>
+			<!-- Header Navbar Desctop version -->
+			<div class="header-nav">
+				<div class="header-nav__logo"><h3>Gra Gra</h3></div>
+				<a href="#!" class="header-nav__main-btn header-btn"><i class="material-icons header_ico">home</i></a>
+				<a href="#!" class="header-nav__add-btn header-btn active"><i class="material-icons header_ico">add_circle_outline</i></a>
+				<a href="#!" class="header-nav__chat-btn header-btn"><i class="material-icons header_ico">chat</i><span class="span-count-messages active">23</span></a>
+				<a href="#!" class="header-nav__account-btn header-btn"><i class="material-icons header_ico">account_circle</i></a>
+			</div>
+		</div>
+	</header>
+	<!-- Content Block -->
+	<main class="main">
+		<div class="m-container">
+            <div class="upload-image-block">
+				<h4>Выберете фото для загрузки</h4>
+				<div id="uploadedImages" class="upload-image-block__uploaded-item"></div>
+				<img id="croppedImage"/>
+				<div class="upload-image-block__buttons">
+			        <input type="file" name="fileUpload" id="fileUpload">
+				    <a class="button-submit">Сохранить</a>
+				</div>
+			</div>
+			</div>
+		</div>
+	</main>
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="m-container">
+			<!-- Sidebar for mobile version -->
+			<div class="footer-nav-mobile">
+				<a href="#!" class="footer-nav-mobile__main-btn footer-btn"><i class="material-icons">home</i></a>
+				<a href="#!" class="footer-nav-mobile__add-btn footer-btn active"><i class="material-icons">add_circle_outline</i></a>
+				<a href="#!" class="footer-nav-mobile__chat-btn footer-btn"><i class="material-icons">chat</i><span class="span-count-messages active">23</span></a>
+				<a href="#!" class="footer-nav-mobile__account-btn footer-btn"><i class="material-icons">account_circle</i></a>
+			</div>
+			<div class="footer-nav">
+				<p>@GRA GRAM</p>
+			</div>
+		</div>
+	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/croppie.min.js"></script>
+</body>
+</html>
