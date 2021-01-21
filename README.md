@@ -1,5 +1,7 @@
 # gragra
 
+## on development stage
+
 ## Project setup
 ```
 npm install
